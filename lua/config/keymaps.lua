@@ -3,7 +3,6 @@
 -- Add any additional keymaps here
 
 local keymap = vim.keymap
-local map = LazyVim.safe_keymap_set
 
 keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit", silent = true })
 keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save File", silent = true })
@@ -13,6 +12,3 @@ keymap.set("i", "jk", "<Esc>", { noremap = true })
 -- Buffers
 keymap.set("n", "<Tab>", vim.cmd.bp, { desc = "Next Buffer", silent = true })
 keymap.set("n", "<C-w>", ":bd<CR>", { desc = "Close Buffer", noremap = true, silent = true })
-
--- Searching
--- map()
