@@ -29,4 +29,4 @@ local catppuccin = {
   },
 }
 
-return { tokyonight }
+return { catppuccin }
