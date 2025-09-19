@@ -19,8 +19,8 @@ local catppuccin = {
         transparent_background = true,
         term_colors = true,
         float = {
-          transparent = true,
-          solid = false,
+          transparent = false,
+          solid = true,
         },
       })
 
@@ -29,4 +29,4 @@ local catppuccin = {
   },
 }
 
-return { catppuccin }
+return { tokyonight }
