@@ -1,10 +1,12 @@
 local tokyonight = {
-  "folke/tokyonight.nvim",
-  opts = {
-    transparent = { true },
-    styles = {
-      sidebars = "transparent",
-      floats = "transparent",
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = { true },
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
 }
@@ -29,4 +31,5 @@ local catppuccin = {
   },
 }
 
-return { tokyonight }
+return tokyonight
+-- return catppuccin
