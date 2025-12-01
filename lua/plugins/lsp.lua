@@ -1,44 +1,44 @@
 return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      pyright = {
-        settings = {
-          pyright = { disableOrganizeImports = true },
-          python = {
-            analysis = {
-              ignore = { "*" },
-              typeCheckingMode = "off",
-            },
-          },
-        },
-      },
-      ruff = {
-        keys = {
-          {
-            "<leader>co",
-            LazyVim.lsp.action["source.organizeImports"],
-            desc = "Organize Imports",
-          },
-        },
-        -- Logic moved here:
-        on_attach = function(client)
-          -- Disable hover in favor of Pyright
-          client.server_capabilities.hoverProvider = false
-        end,
-      },
-      clangd = {
-        cmd = {
-          "clangd",
-          "--background-index",
-          "--clang-tidy",
-          "--header-insertion=iwyu",
-          "--completion-style=detailed",
-          "--function-arg-placeholders",
-          "-std=c89",
-          "--fallback-style=llvm",
-        },
-      },
-    },
-  },
+  -- "neovim/nvim-lspconfig",
+  -- opts = {
+  --   servers = {
+  --     pyright = {
+  --       settings = {
+  --         pyright = { disableOrganizeImports = true },
+  --         python = {
+  --           analysis = {
+  --             ignore = { "*" },
+  --             typeCheckingMode = "off",
+  --           },
+  --         },
+  --       },
+  --     },
+  --     ruff = {
+  --       keys = {
+  --         {
+  --           "<leader>co",
+  --           LazyVim.lsp.action["source.organizeImports"],
+  --           desc = "Organize Imports",
+  --         },
+  --       },
+  --       -- Logic moved here:
+  --       on_attach = function(client)
+  --         -- Disable hover in favor of Pyright
+  --         client.server_capabilities.hoverProvider = false
+  --       end,
+  --     },
+  --     clangd = {
+  --       cmd = {
+  --         "clangd",
+  --         "--background-index",
+  --         "--clang-tidy",
+  --         "--header-insertion=iwyu",
+  --         "--completion-style=detailed",
+  --         "--function-arg-placeholders",
+  --         "-std=c89",
+  --         "--fallback-style=llvm",
+  --       },
+  --     },
+  --   },
+  -- },
 }
