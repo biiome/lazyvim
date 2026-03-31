@@ -8,6 +8,8 @@ keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit", silent = true })
 keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save File", silent = true })
 keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save and Quit", silent = true })
 keymap.set("i", "jk", "<Esc>", { noremap = true })
+keymap.set("i", "<A-CR>", "<End><CR>", { desc = "Move cursor to EOL then press Enter", silent = true })
+-- keymap.set("i", "<C-CR>", "<End><CR>")
 
 -- Buffers
 keymap.set("n", "<Tab>", vim.cmd.bp, { desc = "Next Buffer", silent = true })
